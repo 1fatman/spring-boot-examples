@@ -1,4 +1,4 @@
-package com.dq.springbootshiro;
+package com.dq;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
