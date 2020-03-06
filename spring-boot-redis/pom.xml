@@ -5,13 +5,13 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.4.RELEASE</version>
+        <version>2.2.5.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.dq</groupId>
-    <artifactId>spring-boot-shiro</artifactId>
+    <artifactId>spring-boot-redis</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-boot-shiro</name>
+    <name>spring-boot-redis</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -20,32 +20,13 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>2.1.1</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
-
-        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <exclusions>
-                <exclusion>
-                    <artifactId>spring-boot-starter-tomcat</artifactId>
-                    <groupId>org.springframework.boot</groupId>
-                </exclusion>
-            </exclusions>
         </dependency>
 
-        <!--使用undertow-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-undertow</artifactId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
 
         <dependency>
@@ -60,6 +41,17 @@
             </exclusions>
         </dependency>
 
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.1.0</version>
+        </dependency>
     </dependencies>
 
     <build>

@@ -1,10 +1,18 @@
 package com.dq.entity;
 
+import lombok.Data;
+
+import java.io.Serializable;
+
 /**
  * @author daquan
  * @version V1.0
  * @date 2020/3/5
  * @Description: TODO
  */
-public class User {
+@Data
+public class User implements Serializable {
+    private int id;
+    private String name;
+    private int age;
 }

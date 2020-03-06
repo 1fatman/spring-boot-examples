@@ -11,6 +11,8 @@
 
     <modules>
         <module>spring-boot-shiro</module>
+        <module>spring-boot-quartz</module>
+        <module>spring-boot-redis</module>
     </modules>
 
 

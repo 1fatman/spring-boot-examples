@@ -7,10 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author daquan
  */
 @SpringBootApplication
-public class SpringBootShiroApplication {
+public class SpringBootRedisApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringBootShiroApplication.class, args);
+        SpringApplication.run(SpringBootRedisApplication.class, args);
     }
 
 }

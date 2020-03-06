@@ -1,0 +1,31 @@
+# spring config
+spring:
+  datasource: # datasource config
+    url: jdbc:mysql://localhost:3306/test?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: daquan
+    hikari: # spring boot default datasource:hikari
+      # 最小空闲连接数量
+      minimum-idle: 5
+      # 连接池最大连接数，默认是10
+      maximum-pool-size: 60
+      # 此属性控制从池返回的连接的默认自动提交行为,默认值：true
+      auto-commit: true
+      # 一个连接idle状态的最大时长（毫秒），超时则被释放（retired），缺省:10分钟
+      idle-timeout: 600000
+      # 此属性控制池中连接的最长生命周期，值0表示无限生命周期，默认1800000即30分钟
+      max-lifetime: 1800000
+      # 数据库连接超时时间,默认30秒，即30000
+      connection-timeout: 60000
+  output:
+    ansi:
+      enabled: always # 启用彩色日志输出
+
+# mybatis-plus config
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.dq.entity
+  configuration: # 将日志输入到控制台
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
