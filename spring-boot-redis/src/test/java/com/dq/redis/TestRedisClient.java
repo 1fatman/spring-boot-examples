@@ -45,11 +45,11 @@ public class TestRedisClient {
     final static String randomCode() {
         Random random = new Random();
         int len = 6;
-        String res = "";
+        StringBuilder res = new StringBuilder();
         for (int i = 0; i < len; i++) {
-            res += random.nextInt(10) + "";
+            res.append(random.nextInt(10));
         }
-        return res;
+        return res.toString();
     }
 
     public static void main(String[] args) {
@@ -60,6 +60,8 @@ public class TestRedisClient {
     @Test
     void testSetCode() {
         redisClient.set("user:2:code", randomCode(), CacheTime.CACHE_EXP_MINUTE);
+        Object o = redisClient.get("user:2:code");
+        System.out.println(o.toString());
     }
 
     @Test
